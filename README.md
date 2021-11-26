@@ -1,6 +1,9 @@
 # AGDLP_ShareFoldersAndOUstructure
 
-Create two files with the following content; Change variables accordingly.
+1. Install prerequisite Powershell Module for setting NTFS permissions
+https://www.powershellgallery.com/packages/NTFSSecurity/4.2.4
+
+2. Create two files with the following content; Change variables accordingly.
 
 Variables.ps1
 ```
