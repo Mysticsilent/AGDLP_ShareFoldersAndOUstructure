@@ -48,8 +48,8 @@ if( -Not (Test-Path -Path "$folderpath" ) )
     Add-ADGroupMember -Identity ("$groupnamelocalwrite") -Members $TempReadGroup -Server $dc
     
     #Create AD read groups (DLG and GG)
-    New-ADGroup -server "$dc" -GroupScope global -Name "$groupnameglobalread" -Path "$OUtargetLocation" -Description "global permission to write on $folderpath" 
-    New-ADGroup -server "$dc" -GroupScope domainlocal -Name "$groupnamelocalread" -Path "$OUtargetLocation" -Description "local permission to write on $folderpath"  
+    New-ADGroup -server "$dc" -GroupScope global -Name "$groupnameglobalread" -Path "$OUtargetLocation" -Description "global permission to read on $folderpath" 
+    New-ADGroup -server "$dc" -GroupScope domainlocal -Name "$groupnamelocalread" -Path "$OUtargetLocation" -Description "local permission to read on $folderpath"  
     # Group nesting AD read groups (DLG and GG)
     $TempReadGroup = get-adgroup -server $dc -Identity ("$groupnameglobalread")
     Add-ADGroupMember -Identity ("$groupnamelocalread") -Members $TempReadGroup -Server $dc
