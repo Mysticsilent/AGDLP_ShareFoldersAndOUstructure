@@ -6,7 +6,7 @@ https://www.powershellgallery.com/packages/NTFSSecurity/4.2.4
 2. Create two files with the following content; Change variables accordingly.
 
 Variables.ps1
-```
+```powershell
 # Define fileserver share
 $dir = "\\FILESERVER\SHARE"
 
@@ -28,7 +28,7 @@ $domainadmin = "DOMAIN\domain admins"
 ```
 
 folders.txt
-```
+```powershell
 Folder1
 Folder2
 Folder3
